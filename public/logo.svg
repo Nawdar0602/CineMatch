@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#1a1a2e" />
+  
+  <!-- Film reel elements -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#e94560" stroke-width="16" />
+  
+  <!-- Film sprocket holes -->
+  <circle cx="256" cy="56" r="20" fill="#e94560" />
+  <circle cx="256" cy="456" r="20" fill="#e94560" />
+  <circle cx="56" cy="256" r="20" fill="#e94560" />
+  <circle cx="456" cy="256" r="20" fill="#e94560" />
+  <circle cx="186" cy="106" r="20" fill="#e94560" />
+  <circle cx="326" cy="106" r="20" fill="#e94560" />
+  <circle cx="186" cy="406" r="20" fill="#e94560" />
+  <circle cx="326" cy="406" r="20" fill="#e94560" />
+  <circle cx="106" cy="186" r="20" fill="#e94560" />
+  <circle cx="106" cy="326" r="20" fill="#e94560" />
+  <circle cx="406" cy="186" r="20" fill="#e94560" />
+  <circle cx="406" cy="326" r="20" fill="#e94560" />
+  
+  <!-- Central film icon -->
+  <rect x="206" y="206" width="100" height="100" rx="10" fill="#e94560" />
+  <rect x="226" y="226" width="60" height="60" rx="5" fill="#1a1a2e" />
+  
+  <!-- Heart icon (for match concept) -->
+  <path d="M256 300 L226 270 Q206 250 206 230 Q206 210 226 210 Q246 210 256 230 Q266 210 286 210 Q306 210 306 230 Q306 250 286 270 Z" fill="#ffffff" />
+</svg>
