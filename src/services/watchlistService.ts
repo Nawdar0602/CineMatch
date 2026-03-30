@@ -1,4 +1,5 @@
 import { WatchlistItem, WatchStatus } from '../stores/watchlistStore';
+import { Movie } from '../stores/movieStore';
 import { Friend } from '../stores/friendStore';
 
 // In een echte app zou deze data uit de database komen
