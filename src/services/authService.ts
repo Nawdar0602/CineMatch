@@ -68,7 +68,15 @@ type AuthResponse = {
 
 // Lege array voor gebruikers (in een echte app zouden gebruikers uit de database komen)
 const MOCK_USERS: any[] = [
-  // Geen mock gebruikers meer, gebruikers komen uit de database
+  {
+    id: 1,
+    username: 'admin',
+    email: 'admin@cinematch.nl',
+    password: 'admin123',
+    profilePicture: 'https://i.pravatar.cc/150?img=1',
+    bio: 'Admin gebruiker',
+    isAdmin: true
+  }
 ];
 
 // Simuleer een API call met een timeout

@@ -14,7 +14,7 @@ import {
 } from '../services/api';
 
 const Discover: React.FC = () => {
-  const { movies, setMovies, isLoading, setLoading, error, setError } = useMovieStore();
+  const { movies, currentIndex, setMovies, isLoading, setLoading, error, setError } = useMovieStore();
   const [genres, setGenres] = useState<{ id: number; name: string }[]>([]);
   
   // Functie om films te laden
@@ -47,11 +47,11 @@ const Discover: React.FC = () => {
   
   // Controleer of er nieuwe films geladen moeten worden
   useEffect(() => {
-    if (movies.length > 0 && movies.length <= 3) {
-      // Laad nieuwe films als er bijna geen meer zijn
+    const remaining = movies.length - currentIndex;
+    if (movies.length > 0 && remaining <= 3) {
       loadMovies();
     }
-  }, [movies.length]);
+  }, [currentIndex]);
   
   // Handlers voor filters
   const handleSearch = async (query: string) => {
@@ -246,7 +246,7 @@ const Discover: React.FC = () => {
             </motion.button>
           </div>
         </motion.div>
-      ) : movies.length === 0 ? (
+      ) : movies.length - currentIndex <= 0 ? (
         <motion.div 
           className="flex-1 flex flex-col items-center justify-center p-6"
           initial={{ opacity: 0, y: 20 }}
@@ -282,7 +282,7 @@ const Discover: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <SwipeStack movies={movies} />
+          <SwipeStack />
         </motion.div>
       )}
     </div>

@@ -12,6 +12,11 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  const fillAdmin = () => {
+    setEmail('admin@cinematch.nl');
+    setPassword('admin123');
+  };
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -88,6 +93,14 @@ const Login: React.FC = () => {
               />
             </div>
             
+            <button
+              type="button"
+              onClick={fillAdmin}
+              className="w-full mb-3 bg-yellow-500 bg-opacity-20 border border-yellow-500 border-opacity-40 text-yellow-300 font-semibold py-2 px-4 rounded-lg hover:bg-opacity-30 transition-all text-sm"
+            >
+              Admin invullen (admin@cinematch.nl / admin123)
+            </button>
+
             <button
               type="submit"
               className="w-full bg-accent text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent disabled:opacity-50"
