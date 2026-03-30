@@ -13,7 +13,6 @@ import { Friend } from '../stores/friendStore';
 // };
 
 // Lege arrays voor data (in een echte app zou deze data uit de database komen)
-const MOCK_FRIENDS: Friend[] = [];
 
 const MOCK_WATCHLIST: WatchlistItem[] = [];
 

@@ -36,7 +36,7 @@ const Watchlist: React.FC = () => {
   const handleStatusChange = async (itemId: number, status: WatchStatus) => {
     try {
       setLoading(true);
-      const updatedItem = await updateWatchlistItemStatus(itemId, status);
+      await updateWatchlistItemStatus(itemId, status);
       updateItemStatus(itemId, status);
     } catch (err: any) {
       setError(err.message || 'Er is iets misgegaan bij het bijwerken van de status');

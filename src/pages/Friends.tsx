@@ -56,7 +56,8 @@ const Friends: React.FC = () => {
     };
     
     loadData();
-  }, [setFriends, setPendingRequests, setMatches, setLoading, setError]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [setFriends, setPendingRequests, setSentRequests, setMatches, setLoading, setError]);
   
   const handleSendRequest = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { toast } from 'react-toastify';
 
 type ToastType = 'success' | 'error' | 'info' | 'warning';

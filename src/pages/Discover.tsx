@@ -4,13 +4,12 @@ import SwipeStack from '../components/SwipeStack';
 import FilterBar from '../components/FilterBar';
 import { useMovieStore } from '../stores/movieStore';
 import { 
-  fetchPopularMovies, 
-  fetchGenres, 
-  searchMovies, 
+  fetchPopularMovies,
+  fetchGenres,
+  searchMovies,
   fetchMoviesByGenre,
   fetchMoviesByYear,
-  fetchMoviesByStreaming,
-  fetchStreamingProviders
+  fetchMoviesByStreaming
 } from '../services/api';
 
 const Discover: React.FC = () => {
@@ -43,7 +42,8 @@ const Discover: React.FC = () => {
     
     loadMovies(true); // Reset pagina bij eerste laden
     loadGenres();
-  }, [setMovies, setLoading, setError]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   
   // Controleer of er nieuwe films geladen moeten worden
   useEffect(() => {
@@ -51,7 +51,8 @@ const Discover: React.FC = () => {
     if (movies.length > 0 && remaining <= 3) {
       loadMovies();
     }
-  }, [currentIndex]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex, movies.length]);
   
   // Handlers voor filters
   const handleSearch = async (query: string) => {
