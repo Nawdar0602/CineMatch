@@ -1,5 +1,4 @@
 import { WatchlistItem, WatchStatus } from '../stores/watchlistStore';
-import { Movie } from '../stores/movieStore';
 import { Friend } from '../stores/friendStore';
 
 // In een echte app zou deze data uit de database komen
@@ -13,8 +12,6 @@ import { Friend } from '../stores/friendStore';
 // };
 
 // Lege arrays voor data (in een echte app zou deze data uit de database komen)
-const MOCK_MOVIES: Movie[] = [];
-
 const MOCK_FRIENDS: Friend[] = [];
 
 const MOCK_WATCHLIST: WatchlistItem[] = [];

@@ -1,22 +1,3 @@
-import axios from 'axios';
-
-// MySQL database configuratie
-const DB_CONFIG = {
-  host: 'localhost',
-  user: 'cinematch_user',
-  password: 'your_password',
-  database: 'cinematch'
-};
-
-// In een echte applicatie zou je een MySQL client gebruiken zoals mysql2
-// import mysql from 'mysql2/promise';
-
-// Functie om een database connectie te maken (in een echte app)
-// const getConnection = async () => {
-//   return await mysql.createConnection(DB_CONFIG);
-// };
-
-const API_URL = '/api'; // In een echte app zou dit naar je backend wijzen
 
 // Type definities
 type LoginCredentials = {

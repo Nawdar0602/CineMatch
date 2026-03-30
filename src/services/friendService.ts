@@ -1,5 +1,4 @@
 import { Friend, Match } from '../stores/friendStore';
-import { Movie } from '../stores/movieStore';
 
 // Database connectie en types zullen worden gebruikt in plaats van mock data
 const MOCK_FRIENDS: Friend[] = [];
@@ -10,7 +9,6 @@ const MOCK_SENT_REQUESTS: Friend[] = [];
 // In een echte applicatie zou je hier een database connectie maken
 // Bijvoorbeeld met mysql2 of een andere MySQL client
 
-const MOCK_MOVIES: Movie[] = [];
 
 const MOCK_MATCHES: Match[] = [];
 

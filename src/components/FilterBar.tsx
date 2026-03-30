@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Movie } from '../stores/movieStore';
-import { fetchStreamingProviders } from '../services/api';
 
 interface FilterBarProps {
   onSearch: (query: string) => void;
@@ -27,7 +25,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [friendsOnly, setFriendsOnly] = useState(false);
   const [selectedStreaming, setSelectedStreaming] = useState<string | null>(null);
-  const [streamingServices, setStreamingServices] = useState<{ id: string; name: string; logo: string }[]>([
+  const [streamingServices] = useState<{ id: string; name: string; logo: string }[]>([
     { id: '8', name: 'Netflix', logo: '🔴' },
     { id: '337', name: 'Disney+', logo: '🔵' },
     { id: '384', name: 'HBO Max', logo: '⚫' },
@@ -89,29 +87,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
     setIsOpen(false);
   };
 
-  const handleClearFilters = () => {
-    setSearchQuery('');
-    setSelectedGenre(null);
-    setSelectedYear(null);
-    setFriendsOnly(false);
-    setSelectedStreaming(null);
-    setSortBy('popularity.desc');
-    
-    onSearch('');
-    onFilterByGenre(null);
-    onFilterByYear(null);
-    onFilterByFriends(false);
-    onFilterByStreaming(null);
-  };
-  
-  const activeFiltersCount = [
-    selectedGenre !== null,
-    selectedYear !== null,
-    friendsOnly,
-    selectedStreaming !== null,
-    searchQuery !== ''
-  ].filter(Boolean).length;
-  
   return (
     <div className="relative">
       {/* Filter toggle button - lager gepositioneerd */}
